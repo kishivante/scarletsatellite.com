@@ -6,6 +6,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Scarlet Satellite",
   description: "Yüksek performanslı yazılım ve uygulama geliştirme şirketi. Her şey olsun gönlüne göre.",
+  alternates: {
+    canonical: 'https://www.scarletsatellite.com',
+  }
 };
 
 export default function RootLayout({
