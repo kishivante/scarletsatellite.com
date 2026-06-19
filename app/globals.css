@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Exo2";
+  src: url("/fonts/Exo2Bold-P2rE.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  font-family: "Exo2", sans-serif;
+}
+
+:root {
+  /* Varsayılan olarak (veya koyu modda) sitenin ana arka plan rengi */
+  --background: #0d1117; 
+  --foreground: #ededed;
+  /* İstediğin düz metin rengini buraya tanımlıyoruz */
+  --font-color: #FED8C7; 
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-font: var(--font-color);
+}
+
+/* 
+   Eğer işletim sistemi açık modda bile olsa sitenin hep karanlık kalmasını istiyorsan 
+   @media (prefers-color-scheme: dark) kısmına gerek yok, direkt :root içine yukarıdaki gibi yazdım.
+*/
+
+body {
+  background: var(--background);
+  color: var(--font-color); /* Tüm düz metinler otomatik #FED8C7 olacak */
+  min-h-full: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-main {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #0586f02c;
+  border: 2px solid #192c3b81;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-main:hover {
+  background-color: #0586f08c;
+}
